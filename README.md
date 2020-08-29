@@ -1,24 +1,27 @@
-# examentdd1
+# 29 Agosto 2020
+# Prueba Front End Desafío Latam - Talento Digital - SENCE
+## Nombre: José Rubén Cerrada Meza
+## Rut:  26681954-4
+## Generaciión 1 Desarrollo Front End
 
-## Project setup
+## Para la instalación de la aplicación se debe copiar la carpeta y ejecutar el comando
+### para mayor información visitar (https://classic.yarnpkg.com/es-ES/docs/migrating-from-npm/)
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### compilación y ejecución del servidor 
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### compilarción para producción 
 ```
 yarn build
 ```
 
-### Lints and fixes files
-```
-yarn lint
-```
+## Descripción del programa: 
+### Aplicación de los conocimientos aprendidos durante el programa
+### y optar a la certificación oficial de Talento Digital 
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
