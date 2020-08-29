@@ -3,6 +3,9 @@
 ## Nombre: José Rubén Cerrada Meza
 ## Rut:  26681954-4
 ## Generación 1 Desarrollo Front End
+# Dirección web:  https://joserubencerrada-ttdd.web.app/
+## Gracias
+
 
 ## Para la instalación de la aplicación se debe copiar la carpeta y ejecutar el comando
 ### para mayor información visitar (https://classic.yarnpkg.com/es-ES/docs/migrating-from-npm/)

@@ -1,0 +1,135 @@
+<template>
+<div class="container">
+    <h2>Pantalla de Ordenes</h2>
+    <div class="row">
+        <div class="col-sm">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>N° Orden</th>
+                        <td>cliente</td>
+                        <td>Fecha Entrega</td>
+                        <td>Estado</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(item, index) in traerDataUltimasOrdenes" :key="index">
+                        <td>{{item.num_orden }}</td>
+                        <td>{{item.cliente}}</td>
+                        <td>{{item.fecha_entrega}}</td>
+                        <td>{{item.estado}}</td>
+                        <td><button class="btn pills btn-primary btn-sm">Ver Detalle</button></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <!--ultimas devolucione -->
+
+        <div class="col-sm">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>N° Orden</th>
+                        <td>cliente</td>
+                        <td>Fecha Devolución</td>
+                        <td>Estado</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(item, index) in ultimas_devoluciones" :key="index">
+                        <td>{{item.num_orden }}</td>
+                        <td>{{item.cliente}}</td>
+                        <td>{{item.fecha_entrega}}</td>
+                        <td><button class="btn pills btn-primary btn-sm">Ver Detalle</button></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</template>
+
+<script>
+export default {
+    name: 'PantallaOrdenes',
+    data() {
+        return {
+            ordenes: [{
+                    "num_orden": 123445,
+                    "cliente": "Multitiendas Sigma SA",
+                    "monto": 1540000,
+                    "cant_productos": 160,
+                    "fecha_entrega": "2020-07-20T00:00:00.000Z",
+                    "avance_preparacion": 0,
+                    "estado": "Ingresado"
+                },
+                {
+                    "num_orden": 123444,
+                    "cliente": "Jugueteria Asimov SpA",
+                    "monto": 980000,
+                    "cant_productos": 45,
+                    "fecha_entrega": "2020-07-20T00:00:00.000Z",
+                    "avance_preparacion": 0.4,
+                    "estado": "Preparacion"
+                },
+                {
+                    "num_orden": 123443,
+                    "cliente": "Bazar Don Lalo LDTA",
+                    "monto": 2400000,
+                    "cant_productos": 120,
+                    "fecha_entrega": "2020-07-18T00:00:00.000Z",
+                    "avance_preparacion": 0.6,
+                    "estado": "Preparacion"
+                },
+                {
+                    "num_orden": 123441,
+                    "cliente": "Claudia Ingrid Romero",
+                    "monto": 1740000,
+                    "cant_productos": 70,
+                    "fecha_entrega": "2020-07-14T00:00:00.000Z",
+                    "avance_preparacion": 1,
+                    "estado": "Entregado"
+                }
+            ],
+            ultimas_devoluciones: [{
+                    "num_orden": "122289",
+                    "cliente": "Multi Game SpA",
+                    "fecha_entrega": "2020-07-20"
+                },
+                {
+                    "num_orden": "122283",
+                    "cliente": "Jugueteria Play LTDA",
+                    "fecha_entrega": "2020-07-20"
+                },
+                {
+                    "num_orden": "122271",
+                    "cliente": "Tiendas La Reina SA",
+                    "fecha_entrega": "2020-07-18"
+                },
+                {
+                    "num_orden": "122232",
+                    "cliente": "Ofertas Unicas LTDA",
+                    "fecha_entrega": "2020-07-14"
+                }
+            ]
+        }
+    },
+
+    computed: {
+        traerDataUltimasOrdenes() {
+            return this.$store.getters.enviarDataUltimasOrdenes;
+        },
+        traerDataUltimasDevoluciones() {
+            return this.$store.getters.enviarDataUltimasDevoluciones;
+        }
+    }
+}
+</script>
+
+<style>
+
+</style>

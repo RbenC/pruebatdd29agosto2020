@@ -1,14 +1,14 @@
 import axios from 'axios';
 
 
-export async function APITDD(parametro1){
+export async function APITDD(){
     try {
-        let url = `https://cors-anywhere.herokuapp.com/https://pruebafrontend.desafiolatam.com/api/v1`;
-        let response =  await axios.get(`${url}/${parametro1}`);
-        //console.log(response.data);
+        let BASE_URL = 'http://157.230.190.251/';
+        let response =  await axios.get(`https://cors-anywhere.herokuapp.com/${BASE_URL}/api/v1/cmodels/secure/dashboard`);
+        console.log(response.data);
         return response.data;
        } catch(error) {
-            console.log("Error found:  ", error); 
+            console.log("Error Encontrado....:  ", error); 
         }
 
 }
