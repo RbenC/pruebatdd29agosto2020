@@ -2,7 +2,7 @@
 # Prueba Front End Desafío Latam - Talento Digital - SENCE
 ## Nombre: José Rubén Cerrada Meza
 ## Rut:  26681954-4
-## Generaciión 1 Desarrollo Front End
+## Generación 1 Desarrollo Front End
 
 ## Para la instalación de la aplicación se debe copiar la carpeta y ejecutar el comando
 ### para mayor información visitar (https://classic.yarnpkg.com/es-ES/docs/migrating-from-npm/)
@@ -15,7 +15,7 @@ yarn install
 yarn serve
 ```
 
-### compilarción para producción 
+### compilación para producción 
 ```
 yarn build
 ```

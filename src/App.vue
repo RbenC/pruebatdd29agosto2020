@@ -9,6 +9,9 @@
 </template>
 
 <script>
+import {
+    APITDD
+} from "./configuracion/conexionAPI.js";
 import BarraNavegacionActivo from './components/BarraNavegacionActivo.vue';
 import Footer from './components/Footer.vue';
 
@@ -17,6 +20,29 @@ export default {
     components: {
         BarraNavegacionActivo,
         Footer
+    },
+
+    mounted() {
+        APITDD('users/me').then(response => {
+            this.$store.dispatch('llamandousersme', response);
+        }).catch(error => console.error(error));
+
+        APITDD('courses').then(response => {
+            this.$store.dispatch('llamandocourses', response);
+        }).catch(error => console.error(error));
+
+        APITDD('courses').then(response => {
+            this.$store.dispatch('llamandofundamentos', response);
+        }).catch(error => console.error(error));
+
+        APITDD('courses/css-avanzado').then(response => {
+            this.$store.dispatch('llamandocssavanzado', response);
+        }).catch(error => console.error(error));
+
+        APITDD('courses/javascript').then(response => {
+            this.$store.dispatch('llamandojavascript', response);
+        }).catch(error => console.error(error));
+
     }
 
 }
